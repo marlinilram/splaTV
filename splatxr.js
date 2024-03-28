@@ -83,7 +83,7 @@ const vertexShaderSource = `
       uint rgba = static1.w;
       vColor = 
         // clamp(pos.z/pos.w+1.0, 0.0, 1.0) * 
-        vec4(1.0, 1.0, 1.0, topacity) *
+        vec4(1.0, 1.0, 1.0, 1.0) *
         vec4(
           (rgba) & 0xffu, 
           (rgba >> 8) & 0xffu, 
