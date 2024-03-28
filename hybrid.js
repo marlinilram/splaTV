@@ -225,18 +225,18 @@ function createWorker(self) {
       texdata_c[4 * (16 * j + 7) + 3] = (1 / (1 + Math.exp(-attrs.opacity))) * 255;
 
       // movement over time
-      texdata[16 * j + 8 + 0] = packHalf2x16(attrs.motion_0, attrs.motion_1);
-      texdata[16 * j + 8 + 1] = packHalf2x16(attrs.motion_2, attrs.motion_3);
-      texdata[16 * j + 8 + 2] = packHalf2x16(attrs.motion_4, attrs.motion_5);
-      texdata[16 * j + 8 + 3] = packHalf2x16(attrs.motion_6, attrs.motion_7);
-      texdata[16 * j + 8 + 4] = packHalf2x16(attrs.motion_8, 0);
+      // texdata[16 * j + 8 + 0] = packHalf2x16(attrs.motion_0, attrs.motion_1);
+      // texdata[16 * j + 8 + 1] = packHalf2x16(attrs.motion_2, attrs.motion_3);
+      // texdata[16 * j + 8 + 2] = packHalf2x16(attrs.motion_4, attrs.motion_5);
+      // texdata[16 * j + 8 + 3] = packHalf2x16(attrs.motion_6, attrs.motion_7);
+      // texdata[16 * j + 8 + 4] = packHalf2x16(attrs.motion_8, 0);
 
       // rotation over time
-      texdata[16 * j + 8 + 5] = packHalf2x16(attrs.omega_0, attrs.omega_1);
-      texdata[16 * j + 8 + 6] = packHalf2x16(attrs.omega_2, attrs.omega_3);
+      // texdata[16 * j + 8 + 5] = packHalf2x16(attrs.omega_0, attrs.omega_1);
+      // texdata[16 * j + 8 + 6] = packHalf2x16(attrs.omega_2, attrs.omega_3);
 
       // trbf temporal radial basis function parameters
-      texdata[16 * j + 8 + 7] = packHalf2x16(attrs.trbf_center, Math.exp(attrs.trbf_scale));
+      // texdata[16 * j + 8 + 7] = packHalf2x16(attrs.trbf_center, Math.exp(attrs.trbf_scale));
     }
     console.timeEnd("build buffer");
 
