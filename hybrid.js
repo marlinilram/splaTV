@@ -508,7 +508,7 @@ async function main() {
       readChunks(new Response(blob).body.getReader(), [{ size: 8, type: "magic" }], chunkHandler);
 
       const link = document.createElement("a");
-      link.download = "model.splatv";
+      link.download = "model_frame_0.splatv";
       link.href = URL.createObjectURL(blob);
       document.body.appendChild(link);
       link.click();
