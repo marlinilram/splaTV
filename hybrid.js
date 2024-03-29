@@ -373,12 +373,13 @@ const fragmentShaderSource = `
       float A = -dot(vPosition, vPosition);
       if (A < -4.0) discard;
       float B = exp(A) * vColor.a;
-      fragColor = vec4(B * vColor.rgb, B);
+      fragColor = vec4(B, 0.0, 0.0, 1.0);
+      // fragColor = vec4(B * vColor.rgb, B);
   }
   
   `.trim();
 
-let defaultViewMatrix = [0.99, 0.01, -0.14, 0, 0.02, 0.99, 0.12, 0, 0.14, -0.12, 0.98, 0, -0.09, -0.26, 0.2, 1];
+let defaultViewMatrix = [0.99, 0.01, -0.14, 0, 0.02, 0.99, 0.12, 0, 0.14, -0.12, 0.98, 0, -0.09, -0.26, 0.2,1];
 
 let viewMatrix = defaultViewMatrix;
 async function main() {
